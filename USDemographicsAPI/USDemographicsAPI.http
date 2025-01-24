@@ -1,0 +1,6 @@
+@USDemographicsAPI_HostAddress = http://localhost:5153
+
+GET {{USDemographicsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
