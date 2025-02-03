@@ -26,7 +26,7 @@ public class Repository<T> : IRepository<T> where T : class
                 query = query.Include(property);
             }
         }
-        return query.FirstOrDefault(filter);
+        return query.FirstOrDefault();
 
     }
 
@@ -68,7 +68,7 @@ public class Repository<T> : IRepository<T> where T : class
                 query = query.Include(property);
             }
         }
-        return await query.FirstOrDefaultAsync(filter);
+        return await query.FirstOrDefaultAsync();
     }
 
     public async Task<IEnumerable<T>> GetRangeAsync(Expression<Func<T, bool>> filter, string? includeProperties = null)
